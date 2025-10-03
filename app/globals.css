@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+@plugin "@tailwindcss/typography";
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+.tiptap {
+  @apply prose-img:bg-gray-100 prose-img:w-min prose-img:rounded-md prose-img:px-2 prose-img:py-3 prose w-full outline-none prose-table:max-w-[99%] prose-th:bg-gray-50 prose-th:border-x-1 prose-th:border-t-1 prose-th:border-gray-200;
+}
+
+.bubble-menu {
+  background-color: white;
+  border: 1px solid ghostwhite;
+  border-radius: 0.7rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  padding: 0.6rem;
+
+  button {
+    background-color: unset;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
+    border-radius: 25%;
+
+    &:hover {
+      background-color: gainsboro;
+    }
+
+    &.is-active {
+      background-color: #8dd38c;
+      color: white;
+
+      &:hover {
+        background-color: #8ddc8b;
+      }
+    }
+  }
+}
+
+/* Floating menu */
+.floating-menu {
+  display: flex;
+  background-color: white;
+  padding: 0.1rem;
+  border-radius: 0.5rem;
+
+  button {
+    background-color: unset;
+    padding: 0.275rem 0.425rem;
+    border-radius: 0.3rem;
+
+    &:hover {
+      background-color: gainsboro;
+    }
+
+    &.is-active {
+      background-color: white;
+      color: #8dd38c;
+    }
+  }
+}
